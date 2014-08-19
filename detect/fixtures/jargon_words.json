@@ -1,0 +1,149 @@
+[
+  {
+    "model": "detect.word",
+    "pk": 1,
+    "fields": {
+      "display": "leverage"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 2,
+    "fields": {
+      "display": "mainstream"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 3,
+    "fields": {
+      "display": "beneficiary"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 4,
+    "fields": {
+      "display": "capacity"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 5,
+    "fields": {
+      "display": "participatory"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 6,
+    "fields": {
+      "display": "livelihood"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 7,
+    "fields": {
+      "display": "sustainable"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 8,
+    "fields": {
+      "display": "strategic"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 9,
+    "fields": {
+      "display": "inclusive"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 10,
+    "fields": {
+      "display": "accountable"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 11,
+    "fields": {
+      "display": "bottom-up"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 12,
+    "fields": {
+      "display": "demand-driven"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 13,
+    "fields": {
+      "display": "empower"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 14,
+    "fields": {
+      "display": "innovation"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 15,
+    "fields": {
+      "display": "pro-poor"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 16,
+    "fields": {
+      "display": "outreach"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 17,
+    "fields": {
+      "display": "catalyze"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 18,
+    "fields": {
+      "display": "showcase"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 19,
+    "fields": {
+      "display": "impact"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 20,
+    "fields": {
+      "display": "underserved"
+    }
+  },
+  {
+    "model": "detect.word",
+    "pk": 21,
+    "fields": {
+      "display": "stakeholder"
+    }
+  }
+]
