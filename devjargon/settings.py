@@ -11,15 +11,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("DEVJARGON_SECRET_KEY", ''),
+SECRET_KEY = os.environ.get("DEVJARGON_SECRET_KEY"),
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEVJARGON_DJANGO_DEBUG", ''),
+DEBUG = bool(os.environ.get('DEVJARGON_DJANGO_DEBUG', ''))
 
-TEMPLATE_DEBUG = os.environ.get("DEVJARGON_TEMPLATE_DEBUG", ''),
+TEMPLATE_DEBUG = bool(os.environ.get('DEVJARGON_TEMPLATE_DEBUG', ''))
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split()
 
 # Application definition
 
