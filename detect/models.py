@@ -42,7 +42,7 @@ class Document(models.Model):
         counts = Counter(filtered_stems)
         for wrd in Word.objects.all():
             if counts[wrd.stem] > 0:
-                print '{:<20}{:<5}'.format(wrd.display, counts[wrd.stem])
+                #print '{:<20}{:<5}'.format(wrd.display, counts[wrd.stem])
                 wc = WordCount.objects.create(word=wrd, count=counts[wrd.stem], document=self)
 
 class WordCount(models.Model):
