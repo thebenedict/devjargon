@@ -14,11 +14,18 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = os.environ.get("DEVJARGON_SECRET_KEY"),
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get('DEVJARGON_DJANGO_DEBUG', ''))
+DEBUG =  bool(os.environ.get('DEVJARGON_DJANGO_DEBUG', ''))
 
 TEMPLATE_DEBUG = bool(os.environ.get('DEVJARGON_TEMPLATE_DEBUG', ''))
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split()
+
+ADMINS = (('MB', 'thebenedict@gmail.com'),  )
+
+EMAIL_HOST = os.environ.get("DEVJARGON_EMAIL_HOST", '')
+EMAIL_HOST_USER = os.environ.get("DEVJARGON_EMAIL_HOST_USER", '')
+EMAIL_HOST_PASSWORD = os.environ.get("DEVJARGON_EMAIL_HOST_PASSWORD", '')
+SERVER_EMAIL = os.environ.get("DEVJARGON_SERVER_EMAIL", '')
 
 # Application definition
 
@@ -41,6 +48,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'devjargon.exception_logging_middleware.ExceptionLoggingMiddleware',
 )
 
 ROOT_URLCONF = 'devjargon.urls'
