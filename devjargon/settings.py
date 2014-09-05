@@ -22,10 +22,10 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split()
 
 ADMINS = (('MB', 'thebenedict@gmail.com'),  )
 
-EMAIL_HOST = os.environ.get("DEVJARGON_EMAIL_HOST", '')
-EMAIL_HOST_USER = os.environ.get("DEVJARGON_EMAIL_HOST_USER", '')
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_HOST_USER = 'postmaster@devjargon.org'
 EMAIL_HOST_PASSWORD = os.environ.get("DEVJARGON_EMAIL_HOST_PASSWORD", '')
-SERVER_EMAIL = os.environ.get("DEVJARGON_SERVER_EMAIL", '')
+SERVER_EMAIL = 'robot@devjargon.org'
 
 # Application definition
 
