@@ -1,9 +1,11 @@
-git+https://github.com/django/django.git@1.7c2
+Django==1.7c2
 Pillow==2.5.1
 PyYAML==3.11
 argcomplete==0.8.1
 beautifulsoup4==4.3.2
+certifi==14.05.14
 django-braces==1.4.0
+django-cors-headers==0.13
 django-extensions==1.3.10
 lxml==3.3.5
 nltk==2.0.4
@@ -11,6 +13,7 @@ pdfminer==20140328
 psycopg2==2.5.3
 python-docx==0.7.4
 python-pptx==0.4.2
+requests==2.4.0
 six==1.7.3
 textract==0.5.1
 wsgiref==0.1.2
