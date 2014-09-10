@@ -13,4 +13,4 @@ var JargonRouter = Backbone.Router.extend({
 })
 
 app.TodoRouter = new JargonRouter();
-Backbone.history.start({ pushState: true });
+Backbone.history.start();
