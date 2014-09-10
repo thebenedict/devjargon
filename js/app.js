@@ -12,7 +12,7 @@ $(':button').click(function(){
             return $.ajaxSettings.xhr();
         },
         success: function(data) {
-        	destination = "/documents/" + data['id']
+        	destination = "#/documents/" + data['id']
         	window.location.href = destination;
         },
         error: function(e) {
