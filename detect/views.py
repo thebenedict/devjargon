@@ -18,7 +18,6 @@ class DocumentView(JSONResponseMixin, DetailView):
         context_dict = {
             u"id": self.object.id,
             u"title": self.object.title,
-            u"organization": self.object.organization.name,
             u"words": self.object.total_word_count,
             u"source_file": self.object.source_file.url,
             u"word_counts": list(counts),
@@ -41,7 +40,6 @@ class DocumentListView(JSONResponseMixin, CsrfExemptMixin, ListView):
             context_dict = {
                 u"id": d.id,
                 u"title": d.title,
-                u"organization": d.organization.name,
                 u"words": d.total_word_count,
                 u"source_file": d.source_file.url,
             }
