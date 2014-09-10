@@ -6,6 +6,7 @@
     <meta name="description" content="Find jargon in international development reports">
     <title>Devjargon</title>
     <link rel="stylesheet" href="css/pure-min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!--[if lte IE 8]>
         <link rel="stylesheet" href="css/grids-responsive-old-ie-min.css">
     <![endif]-->
@@ -16,27 +17,86 @@
   </head>
 <body>
   <div class="pure-g" id="devjargon-app">
-    <div class="content pure-u-1">
+    <div class="menu pure-u-1 pure-u-lg-4-24">
+      <div class="logo-container">
+        <h1 class="logo"><i class="fa fa-quote-left"></i> International</h1>
+        <h1 class="logo">Development</h1>
+        <h1 class="logo">Jargon</h1>
+        <h1 class="logo">Detector <i class="fa fa-quote-right"></i></h1>
+      </div>
+      <div class="attribution">
+        <span>by <a href="https://www.twitter.com/thebenedict">@thebenedict</a></span>
+        <div class="social">
+          <a href="https://www.twitter.com/thebenedict"><i class="fa fa-twitter fa-fw"></i></a>
+          <a href="https://www.github.com/thebenedict"><i class="fa fa-github-alt fa-fw"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="content pure-u-1 pure-u-lg-20-24">
+      <div class="content-inner">
+        <div class="welcome">
+          <h1 class="page-header">Let's find some jargon</h1>
+          <p>The International Development Jargon Detector counts jargon words in reports, presentations and other documents. Upload a file below to start catalyzing sustainable change:</p>
+        </div>
+        <form class="pure-form pure-form-aligned" enctype="multipart/form-data">
+          <div class="row">
+              <div class="pure-control-group">
+                <label for="title">Document name/title</label>
+                <input type="text" name="title" required>
+              </div>
+              <div class="pure-control-group">
+                <label for="source_file">File</label>
+                <input type="file" name="source_file" required>
+              </div>
+              <div class="pure-controls">
+                <input type="button" class="pure-button pure-button-primary" id="submit-file" value="Submit" />
+              </div>
+          </div>  
+        </form>
+        <p>Don't have a report to use? <a href="https://www.google.com/#q=report+site:worldbank.org+filetype:pdf" target="_blank">Try one of these</a></p>
 
-      <form enctype="multipart/form-data">
-        <div class="row">
-            <label>Title<input type="text" name="title"></label>
-            <label>Organization<input type="text" name="organization"></label> 
-            <label>Upload file<input id="fileupload" type="file" name="source_file"></label>
-            <input type="button" value="Submit" />
-        </div>  
-      </form>
+        <div class="about">
+          <h1 class="page-header">FAQ</h1>
+          <h4>What's this about?</h4>
+          <p>The International Development Jargon Detector (IDJD) is a bottom-up, data-driven approach to empowering underserved beneficiaries in the field. It was also a way to play with <a href="https://github.com/deanmalmgren/textract" target="_blank">text extraction</a> and the <a href="http://www.nltk.org/" target="_blank">Natural Language Toolkit</a> in Python.</p>
+
+          <h4>What does it actually do?</h4>
+          <p>The IDJD uses a pre-defined list of "jargon" words. It extracts text from most common file formats and counts how many times the uploaded text contains words from the list. <a href="http://en.wikipedia.org/wiki/Word_stem">Word stems</a> are used for counting so, for example, "sustain", "sustaining" and "sustainability" are considered the same. Stop words like "of", "it", "the" are ignored.</p>
+
+          <h4>What file formats can I use?</h4>
+          <p>Most of them! .txt and .doc(x) will work, but so will .pdf and .ppt, and even .csv, .xls(x) and .json</p>
+
+          <h4>What are some current limitations of the IDJD</h4>
+          <p>The main limitation is that words are compared one at a time, out of context. This misses phrases like "results oriented" or "in the field". It also means the IDJD can't make qualitative distinctions &ndash; "capacity" is considered jargon whether we "built stakeholder capacity" or "installed a water tank with a 10,000L capacity".</p>
+          <p>These deficiencies will be addressed in a future version, pending donor funding</p>
+
+          <h4>Where can I read more about jargon and international development?</h4>
+          <p>Great question. Here are some articles and blog posts:</p>
+          <ul class="readmore">
+            <li><a href="http://blogs.adb.org/blog/jargon-hurts-poor">Jargon hurts the poor</a></li>
+            <li><a href="http://www.telegraph.co.uk/news/politics/9349970/Alan-Duncan-issues-memo-at-DFID-banning-jargon-words-like-going-forward.html">Alan Duncan issues memo at DFID banning jargon words such as 'going forward'</a></footer></li>
+            <li><a href="http://www.whydev.org/9-development-phrases-we-hate-and-suggestions-for-a-new-lexicon/">9 development phrases we hate</a>
+            <li><a href="http://williameasterly.org/the-aidspeak-dictionary/">The Aidspeak Dictionary</a></li>
+          </ul>
+
+          <h4>Is this serious?</h4>
+          <p>Yes, of course. It's <a href="https://www.youtube.com/watch?v=5Qf6Sv3A9zs">very interesting</a>.</p>
+        </div>
+      </div>
     </div>
   </div>
 
+  <a href="https://github.com/thebenedict/devjargon/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me (on GitHub)" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
   <script type="text/template" id="document-template">
-    <div id="document-container"></div>
       <div class="document-header">
-        <h1><%= title %></h1>
-        <h2><%= organization %></h2>
+        <h1 class="page-header"><%= title %></h1>
       </div>
-      <svg id="word-counts" class="bubble" width="500" height="500"></svg>
-    </div>
+      <p>Of <strong><%= words %></strong> words in this document, the <strong><%= word_counts.length %></strong> jargon words below were found a total of <strong><%= _.reduce(word_counts, function(sum, wc){ return sum + wc.count; }, 0) %></strong> times</p>
+      <svg id="word-counts" class="bubble" width="450" height="450"></svg>
+      <div>
+        <input type="button" class="pure-button" id="start-over" value="Start over" />
+      </div>
   </script>
 
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>

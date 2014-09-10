@@ -1,7 +1,88 @@
-html, body { height: 100%; }
+.pure-g > div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 .content {
-    max-width: 768px;
-    margin: 0 auto;
-    padding: 2.5em 0 3em;
+	min-height: 100%;
+	padding: 2em;
+}
+
+.content-inner {
+	max-width: 768px;
+	text-align: left;
+}
+
+p {
+	line-height: 1.6em;
+}
+
+.menu {
+	padding: 0.5em 0.75em;
+	background: #191970;
+	min-height: 100%;
+}
+
+.logo-container {
+	margin-top: 0.5em;
+}
+
+.logo {
+	color: #fff;
+	font-size: 1.2em;
+	padding: 0;
+	margin: 0;
+	line-height: 1.2em;
+	letter-spacing: 1px;
+}
+
+.attribution {
+	font-size: 85%;
+	margin-top: 1.5em;
+	font-weight: 100;
+	color: #fff;
+	letter-spacing: 1px;
+	line-height: 1.6em;
+}
+
+.attribution a { 
+	text-decoration: none;
+	color: #fff;
+} 
+
+.attribution a:hover {
+	color: indianred;
+}
+
+h1.page-header {
+	margin-top: 0;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 0.5em;
+}
+
+.pure-button-primary { background-color: indianred; }
+
+.about {
+	margin-top: 3em;
+}
+
+.about h4 {
+	margin-bottom: 0.3em;
+}
+
+.about p {
+	margin-top: 0;
+	margin-bottom: 1.5em;
+}
+
+.readmore {
+	margin-top: -1em;
+	line-height: 1.6em;
+}
+
+@media(min-width: 1024px) {
+	html, body { height: 100%; }
+
+	#devjargon-app { min-height: 100%; }
 }
