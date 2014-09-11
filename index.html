@@ -53,7 +53,7 @@
               </div>
           </div>  
         </form>
-        <p>Don't have a report to use? <a href="https://www.google.com/#q=report+site:worldbank.org+filetype:pdf" target="_blank">Try one of these</a></p>
+        <p>Don't have a report to use? <a href="https://www.google.com/#q=report+site:worldbank.org+filetype:pdf" target="_blank">Try one of these</a>.</p>
 
         <div class="about">
           <h1 class="page-header">FAQ</h1>
@@ -68,7 +68,7 @@
 
           <h4>What are some current limitations of the IDJD</h4>
           <p>The main limitation is that words are compared one at a time, out of context. This misses phrases like "results oriented" or "in the field". It also means the IDJD can't make qualitative distinctions &ndash; "capacity" is considered jargon whether we "built stakeholder capacity" or "installed a water tank with a 10,000L capacity".</p>
-          <p>These deficiencies will be addressed in a future version, pending donor funding</p>
+          <p>These deficiencies will be addressed in a future version, pending donor funding.</p>
 
           <h4>Where can I read more about jargon and international development?</h4>
           <p>Great question. Here are some articles and blog posts:</p>
@@ -92,7 +92,7 @@
       <div class="document-header">
         <h1 class="page-header"><%= title %></h1>
       </div>
-      <p>Of <strong><%= words %></strong> words in this document, the <strong><%= word_counts.length %></strong> jargon words below were found a total of <strong><%= _.reduce(word_counts, function(sum, wc){ return sum + wc.count; }, 0) %></strong> times</p>
+      <p>Of <strong><%= numeral(words).format('0,0') %></strong> words in this document, the <strong><%= word_counts.length %></strong> jargon words below were found a total of <strong><%= _.reduce(word_counts, function(sum, wc){ return sum + wc.count; }, 0) %></strong> times</p>
       <svg id="word-counts" class="bubble" width="450" height="450"></svg>
       <div>
         <input type="button" class="pure-button" id="start-over" value="Start over" />
@@ -100,6 +100,7 @@
   </script>
 
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
   <script src="js/lib/jquery-1.11.1.min.js"></script>
   <script src="js/lib/underscore-min.js"></script>
   <script src="js/lib/backbone.js"></script>
@@ -107,6 +108,16 @@
   <script src="js/models/document.js"></script>  
   <script src="js/views/document.js"></script>  
   <script src="js/views/app.js"></script>  
-  <script src="js/routers/router.js"></script>  
+  <script src="js/routers/router.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-54711936-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </body>
 </html>
