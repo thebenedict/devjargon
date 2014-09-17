@@ -45,8 +45,9 @@
                 <input type="text" name="title" required>
               </div>
               <div class="pure-control-group">
-                <label for="source_file">File</label>
+                <label for="source_file">File<div class="help">10mb max</div></label>
                 <input type="file" name="source_file" required>
+
               </div>
               <div class="pure-controls">
                 <input type="button" class="pure-button pure-button-primary" id="submit-file" value="Submit" />
@@ -64,7 +65,7 @@
           <p>The IDJD uses a pre-defined list of "jargon" words. It extracts text from most common file formats and counts how many times the uploaded text contains words from the list. <a href="http://en.wikipedia.org/wiki/Word_stem">Word stems</a> are used for counting so, for example, "sustain", "sustaining" and "sustainability" are considered the same. Stop words like "of", "it", "the" are ignored.</p>
 
           <h4>What file formats can I use?</h4>
-          <p>Most of them! .txt and .doc(x) will work, but so will .pdf and .ppt, and even .csv, .xls(x) and .json</p>
+          <p>Most of them! .txt and .doc(x) will work, but so will .pdf and .ppt, and even .csv and .xls(x)</p>
 
           <h4>What are some current limitations of the IDJD</h4>
           <p>The main limitation is that words are compared one at a time, out of context. This misses phrases like "results oriented" or "in the field". It also means the IDJD can't make qualitative distinctions &ndash; "capacity" is considered jargon whether we "built stakeholder capacity" or "installed a water tank with a 10,000L capacity".</p>
