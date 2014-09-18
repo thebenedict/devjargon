@@ -16,10 +16,13 @@ $(function() {
             },
             beforeSend: function() {
                 $('#submit-file').prop('disabled', true);
-                $('#submit-file').prop('value', 'Finding jargon...')
+                $('#submit-file').prop('value', 'Finding jargon...');
+                NProgress.start();
+                NProgress.inc();
             },
             success: function(data) {
-                destination = "#/documents/" + data['id']
+                NProgress.done();
+                destination = "#/documents/" + data['id'];
                 window.location.href = destination;
             },
             error: function() {
