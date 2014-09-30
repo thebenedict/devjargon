@@ -4,4 +4,4 @@ from detect.models import Document
 class DocumentForm(ModelForm):
 	class Meta:
 		model = Document
-		fields = ['title', 'source_file']
+		fields = ['source_file']

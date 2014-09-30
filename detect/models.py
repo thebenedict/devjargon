@@ -17,7 +17,6 @@ class Word(models.Model):
         super(Word, self).save(*args, **kwargs)
 
 class Document(models.Model):
-    title = models.CharField(max_length=500)
     total_word_count = models.PositiveIntegerField()
     word_counts = models.ManyToManyField(Word, through='WordCount')
     source_file = models.FileField(upload_to='documents')

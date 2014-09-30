@@ -17,7 +17,6 @@ class DocumentView(JSONResponseMixin, DetailView):
 
         context_dict = {
             u"id": self.object.id,
-            u"title": self.object.title,
             u"words": self.object.total_word_count,
             u"source_file": self.object.source_file.url,
             u"word_counts": list(counts),
@@ -33,13 +32,16 @@ class DocumentListView(JSONResponseMixin, CsrfExemptMixin, ListView):
 
     def post(self, request, *args, **kwargs):
         form_data = DocumentForm(request.POST, request.FILES)
+        print(request.POST)
+        print(request.FILES)
+        print form_data
+        print form_data.errors
         d = form_data.save(commit=False)
         d.total_word_count = 0
         try:
             d.save()
             context_dict = {
                 u"id": d.id,
-                u"title": d.title,
                 u"words": d.total_word_count,
                 u"source_file": d.source_file.url,
             }
