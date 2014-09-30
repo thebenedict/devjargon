@@ -32,10 +32,6 @@ class DocumentListView(JSONResponseMixin, CsrfExemptMixin, ListView):
 
     def post(self, request, *args, **kwargs):
         form_data = DocumentForm(request.POST, request.FILES)
-        print(request.POST)
-        print(request.FILES)
-        print form_data
-        print form_data.errors
         d = form_data.save(commit=False)
         d.total_word_count = 0
         try:
